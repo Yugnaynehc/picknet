@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Less Is More: Picking Informative Frames for Video Captioning</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Google Analytics -->
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+
+    <script>
+     function page_loaded() {
+     }
+    </script>
+  </head>
+
+  <body onload="page_loaded()">
+
+    <div id="header">
+      <h1>Less Is More: Picking Informative Frames for Video Captioning</h1>
+      <div style="clear:both;"></div>
+    </div>
+
+    <!--
+         <div id="teaser">
+         </div>
+       -->
+
+    <div class="sechighlight">
+      <div class="container sec">
+        <h2>Abstract</h2>
+
+        <div id="coursedesc">
+          In video captioning task, the best practice has been achieved by attention-based models which associate salient visual components with sentences in the video. However, existing study follows a common procedure which includes a frame-level appearance modeling and motion modeling on equal interval frame sampling, which may bring about redundant visual information, sensitivity to content noise and unnecessary computation cost. We propose a plug-and-play PickNet to perform informative frame picking in video captioning. Based on a standard encoder-decoder framework, we develop a reinforcement-learning-based procedure to train the network sequentially, where the reward of each frame picking action is designed by maximizing visual diversity and minimizing discrepancy between generated caption and the ground-truth. The rewarded candidate will be selected and the corresponding latent representation of encoder-decoder will be updated for future trials. This procedure goes on until the end of the video sequence. Consequently, a compact frame subset can be selected to represent the visual information and perform video captioning without performance degradation. Experiment results show that our model can achieve competitive performance across popular benchmarks while only 6~8 frames are used.
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+
+      <!-- <a href="https://arxiv.org/abs/1803.01457"> -->
+      <a href="static/picknet.pdf">
+        <img src="static/picknet.png" style="width:100%;border: 1px solid #AAA;">
+      </a>
+
+      <br>
+
+      <div style="color:#900;">
+        To appear in ECCV 2018
+      </div>
+
+    </div>
+
+    <div class="sechighlight">
+      <div class="container sec" style="font-size:18px">
+        <div class="row">
+
+          <div class="col-md-5">
+            <h2>Extras</h2>
+            <ul>
+              <li><a href="static/picknet-slides.pdf">slides</a> and <a href="static/picknet-poster.pdf">poster</a></li>
+            </ul>
+            <!-- Find additional resources on  <a href="http://github.com/Yugnaynehc/pknet">Github</a>, including:
+                 <ul>
+                 <li>Training/test code (uses PyTorch)</li>
+                 <li>Pretrained model</li>
+                 <li>Live webcam demo</li>
+                 </ul> -->
+          </div>
+          <div class="col-md-7">
+            <h2>Bibtex</h2>
+            <pre style="font-size:12px;">
+@inproceedings{picknet,
+  title={Less Is More: Picking Informative Frames for Video Captioning},
+  author={Yangyu Chen, Shuhui Wang, Weigang Zhang and Qingming Huang},
+  booktitle={Proceedings of the IEEE European Conference on Computer Vision},
+  year={2018}
+}            </pre>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container sec">
+      <h2>Example Results</h2>
+
+      <br>
+
+      <!-- Example predictions from the model. We slightly cherry picked images in favor of high-resolution, rich scenes and no toilets.
+           <br>
+           Browse the <b>full results</b> on our interactive <a href="browser">predictions visualizer page</a> (30MB) (visualizer code also included on Github).
+           <br><br> -->
+
+      <center>
+        <video src="static/demo.mp4" width="800" height="600" controls="controls" type="video/mp4"> Your browser not support playing video. </video>
+      </center>
+
+      <!-- <div id="gallery">
+           <div class="egimg"><img src="eg/p1.jpeg"></div>
+           <div class="egimg"><img src="eg/p8.jpeg"></div>
+           <div class="egimg"><img src="eg/p9.jpeg"></div>
+
+           <div class="egimg"><img src="eg/p3.jpeg"></div>
+           <div class="egimg"><img src="eg/p4.jpeg"></div>
+           <div class="egimg"><img src="eg/p6.jpeg"></div>
+
+           <div class="egimg"><img src="eg/p10.jpeg"></div>
+           <div class="egimg"><img src="eg/p7.jpeg"></div>
+           <div class="egimg"><img src="eg/p14.jpeg"></div>
+
+           <div class="egimg"><img src="eg/p17.jpeg"></div>
+           <div class="egimg"><img src="eg/p18.jpeg"></div>
+           <div class="egimg"><img src="eg/p2.jpeg"></div>
+           
+           <div class="egimg"><img src="eg/p15.jpeg"></div>
+           <div class="egimg"><img src="eg/p13.jpeg"></div>
+           <div class="egimg"><img src="eg/p16.jpeg"></div>
+
+
+           <div class="egimg"><img src="eg/p12.jpeg"></div>
+           <div class="egimg"><img src="eg/p11.jpeg"></div>
+           <div class="egimg"><img src="eg/p19.jpeg"></div>
+           </div> -->
+
+    </div>
+
+    <div class="sechighlight">
+      <div id="footer">
+        We gratefully acknowledge the support of National Natural Science Foundation of China, <br>
+        National Basic Research Program of China and Key Research Program of Frontier Sciences of CAS.
+      </div>
+    </div>
+
+    <!-- jQuery and Boostrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
+
